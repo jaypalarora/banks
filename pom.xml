@@ -94,37 +94,38 @@
                 </executions>
             </plugin>
 
-            <plugin>
+            <!--<plugin>
                 <groupId>org.flywaydb</groupId>
                 <artifactId>flyway-maven-plugin</artifactId>
                 <version>6.0.3</version>
 
-                <!-- Note that we're executing the Flyway
-                     plugin in the "generate-sources" phase -->
+                &lt;!&ndash; Note that we're executing the Flyway
+                     plugin in the "generate-sources" phase &ndash;&gt;
                 <executions>
                     <execution>
                         <phase>generate-sources</phase>
                         <goals>
-                            <!--                            <goal>validate</goal>-->
+                            &lt;!&ndash;                            <goal>validate</goal>&ndash;&gt;
                             <goal>repair</goal>
                             <goal>migrate</goal>
                         </goals>
                     </execution>
                 </executions>
 
-                <!-- Note that we need to prefix the db/migration
+                &lt;!&ndash; Note that we need to prefix the db/migration
                      path with filesystem: to prevent Flyway
                      from looking for our migration scripts
-                     only on the classpath -->
+                     only on the classpath &ndash;&gt;
                 <configuration>
-                    <url>${spring.datasource.url}</url>
-                    <user>${spring.datasource.username}</user>
-                    <password>${spring.datasource.password}</password>
+&lt;!&ndash;                    <url>${spring.datasource.url}</url>&ndash;&gt;
+                    <url>${env.JDBC_DATABASE_URL}</url>
+                    &lt;!&ndash;<user>${spring.datasource.username}</user>
+                    <password>${spring.datasource.password}</password>&ndash;&gt;
                     <locations>
                         <location>filesystem:src/main/resources/db/migration</location>
                     </locations>
                 </configuration>
-            </plugin>
+            </plugin>-->
 
             <plugin>
                 <groupId>org.jooq</groupId>
