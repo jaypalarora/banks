@@ -1,1 +1,1 @@
-web: java -jar target/banks-0.0.1-SNAPSHOT.jar --spring.profiles.active=heroku
+web: java -jar target/*.jar --spring.profiles.active=heroku
