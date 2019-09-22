@@ -1,7 +1,7 @@
 package com.fyle.banks.repository.impl;
 
 
-import static com.seekify.model.jooq.tables.BankBranches.BANK_BRANCHES;
+import static com.fyle.banks.repository.model.jooq.tables.BankBranches.BANK_BRANCHES;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 import com.fyle.banks.dto.BankDTO;
 import com.fyle.banks.dto.BranchDTO;
 import com.fyle.banks.repository.BankRepository;
-import com.seekify.model.jooq.tables.records.BankBranchesRecord;
+import com.fyle.banks.repository.model.jooq.tables.records.BankBranchesRecord;
 import org.apache.commons.lang3.StringUtils;
 import org.jooq.DSLContext;
 import org.jooq.Record;
