@@ -88,6 +88,7 @@
                         <configuration>
                             <files>
                                 <file>src/main/resources/application.properties</file>
+                                <file>src/main/resources/application-${spring.profiles.active}.properties</file>
                             </files>
                         </configuration>
                     </execution>
