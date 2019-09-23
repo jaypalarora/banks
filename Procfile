@@ -1,1 +1,1 @@
-web: java -jar target/*.jar --spring.profiles.active=heroku
+web: java -jar target/*.jar -Dserver.port=$PORT --spring.profiles.active=heroku
